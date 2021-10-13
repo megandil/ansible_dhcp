@@ -1,0 +1,4 @@
+- name: reiniciar_dhcp
+  command: service isc-dhcp-server restart
+  become: yes
+  become_user: root

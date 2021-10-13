@@ -1,0 +1,17 @@
+
+auto {{ interfaz_nat }}
+iface {{ interfaz_nat }} inet dhcp
+
+auto ens4
+iface ens4 inet static
+      address {{ ip_router_red1 }}
+      netmask {{ mascara_red }}
+
+auto ens5
+iface ens5 inet static
+      address {{ ip_router_red2 }}
+      netmask {{ mascara_red }}
+#RED 1
+up iptables -t nat -A POSTROUTING -s {{ ip_red1_iptables }} -o {{ interfaz_nat }} -j MASQUERADE
+#RED 2
+up iptables -t nat -A POSTROUTING -s {{ ip_red2_iptables }} -o ens3 -j MASQUERADE

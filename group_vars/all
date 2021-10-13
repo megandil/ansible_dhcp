@@ -1,0 +1,19 @@
+ip_router_red1: 192.168.100.1
+interfaz_nat: ens3
+interfaz_red1: ens4
+interfaz_red2: ens5
+ip_router_red2: 192.168.200.1
+mascara_red: 255.255.255.0
+ip_red1_iptables: 192.168.100.0/24
+ip_red2_iptables: 192.168.200.0/24
+ip_red1: 192.168.100.0
+ip_red2: 192.168.200.0
+rango_red1_inicio: 192.168.100.10
+rango_red1_final: 192.168.100.20
+rango_red2_inicio: 192.168.200.10
+rango_red2_final: 192.168.200.20
+dns_dhcp: 1.1.1.1, 1.0.0.1
+broadcast_red1: 192.168.100.255
+broadcast_red2: 192.168.200.255
+lease_red1: 3600
+lease_red2: 43200
