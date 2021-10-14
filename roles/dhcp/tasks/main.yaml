@@ -1,3 +1,7 @@
+- name: "Instalando servidor DHCP..."
+  apt:
+    name: isc-dhcp-server
+
 - name: "Modificando /etc/default/isc-dhcp-server"
   ansible.builtin.template:
     src: etc/default/isc-dhcp-server
