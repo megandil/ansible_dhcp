@@ -2,3 +2,4 @@
   command: service isc-dhcp-server restart
   become: yes
   become_user: root
+  ignore_errors: yes
